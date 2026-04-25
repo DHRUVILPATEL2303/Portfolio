@@ -622,14 +622,14 @@
             </div>
             <span>↗</span>
           </a>
-          <a class="contact-item reveal" href="https://github.com/DHRUVILPATEL2303" target="_blank" rel="noopener noreferrer">
+          <a class="contact-item reveal" href="https://github.com/DHRUVILPATEL2303" target="_blank" rel="noopener noreferrer" aria-label="Visit Dhruvil Patel GitHub profile (opens in new tab)">
             <div>
               <strong>GitHub</strong>
               <span>github.com/DHRUVILPATEL2303</span>
             </div>
             <span>↗</span>
           </a>
-          <a class="contact-item reveal" href="https://www.linkedin.com/in/dhruvil-patel-507301285/" target="_blank" rel="noopener noreferrer">
+          <a class="contact-item reveal" href="https://www.linkedin.com/in/dhruvil-patel-507301285/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dhruvil Patel LinkedIn profile (opens in new tab)">
             <div>
               <strong>LinkedIn</strong>
               <span>linkedin.com/in/dhruvil-patel-507301285</span>
@@ -642,15 +642,17 @@
   </main>
 
   <footer>
-    <div class="container">Built by Dhruvil Patel · © <span id="year"></span></div>
+    <div class="container">Built by Dhruvil Patel · © <span id="year">2026</span></div>
   </footer>
 
   <script>
     const links = document.querySelectorAll('.nav-links a');
     const sections = [...document.querySelectorAll('main section[id]')];
 
+    const NAV_OFFSET = 120;
+
     const markActive = () => {
-      const y = window.scrollY + 120;
+      const y = window.scrollY + NAV_OFFSET;
       let current = sections[0]?.id;
       sections.forEach((section) => {
         if (y >= section.offsetTop) current = section.id;
