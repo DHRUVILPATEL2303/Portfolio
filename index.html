@@ -3,353 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Dhruvil Patel portfolio — Android, backend, and distributed systems projects with direct GitHub links and tech stack." />
+  <meta name="description" content="Dhruvil Patel portfolio with multi-page experience, modern warm UI, and key GitHub projects including Uber-Project and Smart Waste Suite." />
   <title>Dhruvil Patel | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0b1020;
-      --surface: #121a32;
-      --surface-soft: #0f1630;
-      --text: #eef2ff;
-      --muted: #b9c3e7;
-      --line: rgba(255, 255, 255, 0.14);
-      --brand: #84a9ff;
-      --brand-2: #7df0e6;
-      --max: 1120px;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: radial-gradient(circle at 10% -10%, rgba(125, 240, 230, 0.13), transparent 35%),
-                  radial-gradient(circle at 95% 0%, rgba(132, 169, 255, 0.18), transparent 40%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    .container { width: min(100% - 2rem, var(--max)); margin: 0 auto; }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      border-bottom: 1px solid var(--line);
-      background: rgba(11, 16, 32, 0.78);
-      backdrop-filter: blur(8px);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.85rem 0;
-    }
-
-    .brand { font-weight: 800; letter-spacing: 0.02em; color: var(--brand-2); text-decoration: none; }
-
-    .links { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-    .links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.92rem;
-      padding: 0.4rem 0.65rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-    }
-    .links a:hover { color: var(--text); border-color: var(--line); }
-
-    section { padding: 4.5rem 0; }
-
-    .hero { padding-top: 5.2rem; }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.9fr;
-      gap: 1.3rem;
-      align-items: start;
-    }
-
-    h1 {
-      font-size: clamp(2.1rem, 5vw, 3.9rem);
-      line-height: 1.1;
-      margin: 0 0 1rem;
-      max-width: 13ch;
-    }
-
-    .subtitle { color: var(--muted); max-width: 68ch; }
-
-    .cta { margin-top: 1.2rem; display: flex; gap: 0.7rem; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      text-decoration: none;
-      font-weight: 700;
-      border-radius: 10px;
-      padding: 0.7rem 0.95rem;
-      font-size: 0.92rem;
-      border: 1px solid var(--line);
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.03);
-    }
-    .btn.primary {
-      background: linear-gradient(120deg, var(--brand-2), var(--brand));
-      color: #0a1230;
-      border: 0;
-    }
-
-    .panel {
-      background: linear-gradient(170deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 1rem;
-    }
-
-    .meta-list { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.7rem; }
-    .meta-list li { color: var(--muted); font-size: 0.95rem; }
-    .meta-list strong { color: var(--text); display: block; }
-
-    h2 { margin: 0 0 0.8rem; font-size: clamp(1.5rem, 3vw, 2.3rem); }
-    .lead { color: var(--muted); max-width: 72ch; margin: 0; }
-
-    .grid { margin-top: 1.4rem; display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .project h3 { margin: 0 0 0.55rem; font-size: 1.1rem; }
-    .project p { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.95rem; }
-
-    .chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-    .chip {
-      font-size: 0.78rem;
-      border-radius: 999px;
-      padding: 0.28rem 0.6rem;
-      border: 1px solid rgba(132, 169, 255, 0.42);
-      background: rgba(132, 169, 255, 0.13);
-      color: #dde5ff;
-    }
-
-    .project-links { margin-top: 0.9rem; }
-    .project-links a { color: var(--brand-2); font-size: 0.9rem; text-decoration: none; font-weight: 600; }
-
-    .stack-list {
-      margin-top: 1.2rem;
-      display: grid;
-      gap: 0.8rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .stack-list .panel h3 { margin: 0 0 0.45rem; font-size: 1rem; }
-    .stack-list .panel p { margin: 0; color: var(--muted); font-size: 0.93rem; }
-
-    .graph-wrap { margin-top: 1.4rem; overflow-x: auto; }
-    .graph {
-      width: 100%;
-      min-width: 720px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: #fff;
-      padding: 0.4rem;
-    }
-
-    .contact-grid { margin-top: 1.2rem; display: grid; gap: 0.75rem; }
-    .contact-grid a {
-      color: var(--text);
-      text-decoration: none;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 0.8rem 0.95rem;
-      background: rgba(255, 255, 255, 0.03);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 1.2rem 0 2rem;
-      color: var(--muted);
-      font-size: 0.88rem;
-      text-align: center;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid, .grid, .stack-list { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 740px) {
-      section { padding: 3.7rem 0; }
-      nav { flex-direction: column; align-items: flex-start; }
-      .hero { padding-top: 4.6rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="top-socials">
+    <div class="container">
+      <a class="pill" href="mailto:pateldhruvil2303@gmail.com">Email</a>
+      <a class="pill" href="https://www.linkedin.com/in/dhruvil-patel-507301285/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="pill" href="https://x.com/DHRUVIL23033" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+      <a class="pill" href="https://github.com/DHRUVILPATEL2303" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+
   <header>
     <nav class="container" aria-label="Main navigation">
-      <a class="brand" href="#top">Dhruvil Patel</a>
+      <a class="brand" href="index.html">Dhruvil Patel</a>
       <div class="links">
-        <a href="#about">About</a>
-        <a href="#projects">Pinned Projects</a>
-        <a href="#stack">Tech Stack</a>
-        <a href="#contributions">Contributions</a>
-        <a href="#contact">Contact</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <h1>Building Android and backend products with real-world impact.</h1>
+          <h1>Building polished Android and backend products that feel premium.</h1>
           <p class="subtitle">
-            I’m Dhruvil Patel, a mobile and backend developer focused on reliable architecture, clear UX, and scalable systems.
-            This portfolio highlights all repositories currently pinned on my GitHub profile with direct links, project summaries, and stack details.
+            Welcome to my multi-page portfolio. I focus on practical engineering, clean architecture, and user-first UI/UX.
+            Explore projects from my GitHub, including Uber-Project and a unified Smart Waste Suite.
           </p>
           <div class="cta">
-            <a class="btn primary" href="#projects">View pinned projects</a>
-            <a class="btn" href="https://github.com/DHRUVILPATEL2303" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+            <a class="btn primary" href="projects.html">Explore projects</a>
+            <a class="btn" href="about.html">About me</a>
           </div>
         </div>
         <aside class="panel" aria-label="Quick details">
           <ul class="meta-list">
             <li><strong>Name</strong>Dhruvil Patel</li>
-            <li><strong>Focus</strong>Android apps, backend APIs, and distributed systems</li>
+            <li><strong>Focus</strong>Android apps, backend APIs, distributed systems</li>
+            <li><strong>Design style</strong>Clean, modern, smooth and animation-friendly UI</li>
             <li><strong>Location</strong>Ahmedabad, India</li>
-            <li><strong>Current profiles</strong>GitHub, LinkedIn, and X</li>
           </ul>
         </aside>
       </div>
     </section>
 
-    <section id="about">
+    <section>
       <div class="container">
-        <h2>About</h2>
-        <p class="lead">
-          I work across Kotlin Android apps and backend services in Java and Go. My development style is practical: clear code boundaries,
-          maintainable systems, and shipping features that are useful for real users.
-        </p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <h2>Pinned GitHub Projects</h2>
-        <p class="lead">These are all repositories currently pinned on my GitHub profile, each with stack and direct repo link.</p>
-
+        <h2>Featured Projects</h2>
+        <p class="lead">Selected projects from GitHub with strong engineering and product focus.</p>
         <div class="grid">
           <article class="panel project">
-            <h3>SmartWaste-Admin</h3>
-            <p>Admin Android app for SmartWaste operations and management workflows.</p>
+            <h3>Uber-Project</h3>
+            <p>A transport-style product prototype focused on ride flow, responsive interactions, and user-centric booking experience.</p>
             <div class="chips">
-              <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Firebase Auth</span><span class="chip">Firestore</span><span class="chip">Hilt</span><span class="chip">Retrofit</span>
+              <span class="chip">JavaScript</span><span class="chip">Product UI</span><span class="chip">Web App</span>
             </div>
-            <div class="project-links"><a href="https://github.com/DHRUVILPATEL2303/SmartWaste-Admin" target="_blank" rel="noopener noreferrer">Open repository ↗</a></div>
+            <div class="project-links"><a href="https://github.com/DHRUVILPATEL2303/Uber-Project" target="_blank" rel="noopener noreferrer">Open repository ↗</a></div>
           </article>
 
           <article class="panel project">
-            <h3>SmartWaste-User</h3>
-            <p>User-facing SmartWaste app with map features, ML integrations, and notifications.</p>
+            <h3>Smart Waste Suite</h3>
+            <p>Unified presentation of SmartWaste Admin, User, Collector, and Notification Backend as one end-to-end waste management ecosystem.</p>
             <div class="chips">
-              <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Firebase</span><span class="chip">Google Maps</span><span class="chip">ML Kit</span><span class="chip">Retrofit</span>
+              <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">Firebase</span><span class="chip">Spring Boot</span>
             </div>
-            <div class="project-links"><a href="https://github.com/DHRUVILPATEL2303/SmartWaste-User" target="_blank" rel="noopener noreferrer">Open repository ↗</a></div>
-          </article>
-
-          <article class="panel project">
-            <h3>SmartWaste-Waste-Collector</h3>
-            <p>Collector-side SmartWaste app with camera-based scanning, routing, and field workflow support.</p>
-            <div class="chips">
-              <span class="chip">Kotlin</span><span class="chip">Jetpack Compose</span><span class="chip">CameraX</span><span class="chip">Firebase</span><span class="chip">WorkManager</span><span class="chip">Maps</span>
-            </div>
-            <div class="project-links"><a href="https://github.com/DHRUVILPATEL2303/SmartWaste-Waste-Collector" target="_blank" rel="noopener noreferrer">Open repository ↗</a></div>
-          </article>
-
-          <article class="panel project">
-            <h3>DPKV-Color-Trading</h3>
-            <p>Real-time color trading microservices architecture with a low-latency backend and WebSocket updates.</p>
-            <div class="chips">
-              <span class="chip">Go</span><span class="chip">gRPC</span><span class="chip">Redis Pub/Sub</span><span class="chip">PostgreSQL</span><span class="chip">WebSocket</span><span class="chip">Nginx</span>
-            </div>
-            <div class="project-links"><a href="https://github.com/DHRUVILPATEL2303/DPKV-Color-Trading" target="_blank" rel="noopener noreferrer">Open repository ↗</a></div>
+            <div class="project-links"><a href="projects.html#smart-waste-suite">View combined project ↗</a></div>
           </article>
 
           <article class="panel project">
             <h3>DPKV-Prediction-Market</h3>
-            <p>Prediction market platform combining Go microservices backend with Kotlin Android trader/admin apps.</p>
+            <p>A microservices-driven market platform combining Go backend architecture with Kotlin Android clients.</p>
             <div class="chips">
-              <span class="chip">Go</span><span class="chip">Gin</span><span class="chip">gRPC</span><span class="chip">Redis Streams</span><span class="chip">TimescaleDB</span><span class="chip">Kotlin</span>
+              <span class="chip">Go</span><span class="chip">gRPC</span><span class="chip">Redis</span><span class="chip">Kotlin</span>
             </div>
             <div class="project-links"><a href="https://github.com/DHRUVILPATEL2303/DPKV-Prediction-Market" target="_blank" rel="noopener noreferrer">Open repository ↗</a></div>
           </article>
-
-          <article class="panel project">
-            <h3>QuoraApp_Backend_Spring_boot</h3>
-            <p>Quora-style backend API using reactive Spring architecture, caching, search, and event-driven components.</p>
-            <div class="chips">
-              <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">WebFlux</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">Kafka</span>
-            </div>
-            <div class="project-links"><a href="https://github.com/DHRUVILPATEL2303/QuoraApp_Backend_Spring_boot" target="_blank" rel="noopener noreferrer">Open repository ↗</a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="stack">
-      <div class="container">
-        <h2>Tech Stack</h2>
-        <p class="lead">Consolidated stack used across the pinned projects.</p>
-
-        <div class="stack-list">
-          <article class="panel">
-            <h3>Mobile</h3>
-            <p>Kotlin, Jetpack Compose, AndroidX, Hilt, DataStore, WorkManager, CameraX, Google Maps.</p>
-          </article>
-          <article class="panel">
-            <h3>Backend</h3>
-            <p>Go, Java, Spring Boot, Spring WebFlux, Gin, gRPC, WebSocket, REST APIs.</p>
-          </article>
-          <article class="panel">
-            <h3>Data & Messaging</h3>
-            <p>PostgreSQL, TimescaleDB, MongoDB, Redis, Firestore, Kafka, Firebase Cloud Messaging.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="contributions">
-      <div class="container">
-        <h2>GitHub Contributions</h2>
-        <p class="lead">Contribution graph for <strong>DHRUVILPATEL2303</strong>.</p>
-        <div class="graph-wrap">
-          <img class="graph" src="https://ghchart.rshah.org/DHRUVILPATEL2303" alt="GitHub contribution graph for Dhruvil Patel" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <h2>Contact & Links</h2>
-        <p class="lead">Open to internships, collaboration, and product-focused development work.</p>
-        <div class="contact-grid">
-          <a href="mailto:pateldhruvil2303@gmail.com"><span>Email</span><strong>pateldhruvil2303@gmail.com</strong></a>
-          <a href="https://github.com/DHRUVILPATEL2303" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>github.com/DHRUVILPATEL2303</strong></a>
-          <a href="https://www.linkedin.com/in/dhruvil-patel-507301285/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/dhruvil-patel-507301285</strong></a>
-          <a href="https://x.com/DHRUVIL23033" target="_blank" rel="noopener noreferrer"><span>X (Twitter)</span><strong>x.com/DHRUVIL23033</strong></a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">Built by Dhruvil Patel · © <span id="year"></span></div>
+    <div class="container">Built by Dhruvil Patel · © <span data-year></span></div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="script.js"></script>
 </body>
 </html>
