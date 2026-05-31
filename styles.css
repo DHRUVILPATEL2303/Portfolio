@@ -1,14 +1,14 @@
 :root {
-  --bg: #fff2df;
-  --bg-soft: #ffe7c6;
-  --surface: #fff9f1;
-  --surface-2: #fff3e3;
-  --text: #3b2413;
-  --muted: #805d3f;
-  --line: #f2cda3;
-  --brand: #f08a2f;
-  --brand-dark: #cf6a10;
-  --shadow: 0 20px 40px rgba(161, 93, 29, 0.12);
+  --bg: #0f1419;
+  --bg-soft: #1a1f2e;
+  --surface: #16192b;
+  --surface-2: #1e2235;
+  --text: #e8ecf1;
+  --muted: #8b92a1;
+  --line: #2a3142;
+  --brand: #60a5fa;
+  --brand-dark: #3b82f6;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   --max: 1120px;
 }
 
@@ -21,9 +21,9 @@ body {
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at 0% 0%, rgba(240, 138, 47, 0.24), transparent 36%),
-    radial-gradient(circle at 95% 0%, rgba(255, 202, 133, 0.26), transparent 42%),
-    linear-gradient(180deg, var(--bg), #fff6ea 30%, #ffefdc 100%);
+    radial-gradient(circle at 0% 0%, rgba(96, 165, 250, 0.08), transparent 36%),
+    radial-gradient(circle at 95% 0%, rgba(96, 165, 250, 0.06), transparent 42%),
+    linear-gradient(180deg, var(--bg), #0d111a 30%, #0a0f17 100%);
   line-height: 1.65;
 }
 
@@ -31,7 +31,7 @@ body {
 
 .top-socials {
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 249, 241, 0.82);
+  background: rgba(15, 20, 25, 0.82);
   backdrop-filter: blur(7px);
 }
 
@@ -46,20 +46,20 @@ body {
 
 .pill {
   text-decoration: none;
-  color: var(--brand-dark);
+  color: var(--brand);
   font-weight: 600;
   font-size: 0.82rem;
-  border: 1px solid #efbf8e;
+  border: 1px solid #3b4556;
   border-radius: 999px;
   padding: 0.28rem 0.64rem;
-  background: #fff5e7;
+  background: #1a2332;
   transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
 }
 
 .pill:hover {
   transform: translateY(-2px);
-  border-color: #e7a86e;
-  box-shadow: 0 8px 18px rgba(176, 97, 26, 0.16);
+  border-color: #4a5568;
+  box-shadow: 0 8px 18px rgba(96, 165, 250, 0.12);
 }
 
 header {
@@ -67,7 +67,7 @@ header {
   top: 0;
   z-index: 30;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 242, 223, 0.86);
+  background: rgba(15, 20, 25, 0.86);
   backdrop-filter: blur(10px);
 }
 
@@ -81,7 +81,7 @@ nav {
 
 .brand {
   text-decoration: none;
-  color: var(--brand-dark);
+  color: var(--brand);
   font-weight: 800;
   letter-spacing: 0.01em;
 }
@@ -90,7 +90,7 @@ nav {
 
 .links a {
   text-decoration: none;
-  color: #734f34;
+  color: var(--muted);
   font-weight: 600;
   font-size: 0.92rem;
   padding: 0.4rem 0.68rem;
@@ -99,9 +99,9 @@ nav {
 }
 
 .links a:hover, .links a.active {
-  border-color: #efbf8e;
-  color: var(--brand-dark);
-  background: #fff4e5;
+  border-color: #3b4556;
+  color: var(--brand);
+  background: #1a2332;
 }
 
 main { min-height: calc(100vh - 188px); }
@@ -140,18 +140,18 @@ h2 {
   font-size: 0.92rem;
   border-radius: 11px;
   padding: 0.68rem 0.95rem;
-  border: 1px solid #efbf8e;
-  color: var(--brand-dark);
-  background: #fff6ea;
+  border: 1px solid #3b4556;
+  color: var(--brand);
+  background: #1a2332;
   transition: transform .23s ease, box-shadow .23s ease, background .23s ease;
 }
 
-.btn:hover { transform: translateY(-2px); box-shadow: 0 9px 20px rgba(174, 94, 24, 0.16); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 9px 20px rgba(96, 165, 250, 0.2); }
 
 .btn.primary {
   border-color: transparent;
   color: #fff;
-  background: linear-gradient(130deg, #f59b41, var(--brand-dark));
+  background: linear-gradient(130deg, #60a5fa, var(--brand-dark));
 }
 
 .panel {
@@ -174,7 +174,7 @@ h2 {
 }
 
 .project { transition: transform .25s ease, box-shadow .25s ease; }
-.project:hover { transform: translateY(-5px); box-shadow: 0 26px 42px rgba(161, 93, 29, 0.19); }
+.project:hover { transform: translateY(-5px); box-shadow: 0 26px 42px rgba(96, 165, 250, 0.15); }
 
 .project h3 { margin: 0 0 0.5rem; }
 .project p { margin: 0 0 0.8rem; color: var(--muted); font-size: 0.94rem; }
@@ -189,14 +189,14 @@ h2 {
   font-size: 0.76rem;
   border-radius: 999px;
   padding: 0.24rem 0.58rem;
-  color: #8b4a16;
-  background: #ffe3bd;
-  border: 1px solid #efbc87;
+  color: #a8d5ff;
+  background: #1e3a5f;
+  border: 1px solid #2a4a7c;
 }
 
 .project-links { margin-top: 0.86rem; }
 .project-links a {
-  color: var(--brand-dark);
+  color: var(--brand);
   text-decoration: none;
   font-weight: 700;
   font-size: 0.9rem;
@@ -224,7 +224,7 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 0.82rem 0.95rem;
-  background: #fff7ec;
+  background: #1a1f2e;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -232,7 +232,7 @@ h2 {
   transition: transform .22s ease, box-shadow .22s ease;
 }
 
-.contact-grid a:hover { transform: translateY(-3px); box-shadow: 0 14px 24px rgba(173, 95, 26, 0.16); }
+.contact-grid a:hover { transform: translateY(-3px); box-shadow: 0 14px 24px rgba(96, 165, 250, 0.12); }
 
 footer {
   border-top: 1px solid var(--line);
@@ -266,13 +266,13 @@ footer {
 
 .skill-category:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 34px rgba(161, 93, 29, 0.14);
+  box-shadow: 0 18px 34px rgba(96, 165, 250, 0.1);
 }
 
 .skill-category h3 {
   margin: 0 0 0.8rem;
   font-size: 1.1rem;
-  color: var(--brand-dark);
+  color: var(--brand);
 }
 
 .skill-tags {
@@ -286,15 +286,15 @@ footer {
   font-weight: 600;
   border-radius: 999px;
   padding: 0.42rem 0.75rem;
-  color: #8b4a16;
-  background: linear-gradient(135deg, #ffe8c4, #ffd9a8);
-  border: 1px solid #efbc87;
+  color: #a8d5ff;
+  background: linear-gradient(135deg, #1e3a5f, #2a4a7c);
+  border: 1px solid #3a5a9c;
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .skill-tag:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(161, 93, 29, 0.18);
+  box-shadow: 0 6px 16px rgba(96, 165, 250, 0.18);
 }
 
 /* Project Sections */
@@ -305,7 +305,7 @@ footer {
 .category-title {
   margin: 0 0 1.2rem;
   font-size: 1.3rem;
-  color: var(--brand-dark);
+  color: var(--brand);
   font-weight: 700;
   padding-bottom: 0.8rem;
   border-bottom: 2px solid var(--line);
@@ -322,13 +322,13 @@ footer {
 
 .skill-highlight:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 38px rgba(161, 93, 29, 0.16);
+  box-shadow: 0 20px 38px rgba(96, 165, 250, 0.12);
 }
 
 .skill-highlight h3 {
   margin: 0 0 0.6rem;
   font-size: 1.15rem;
-  color: var(--brand-dark);
+  color: var(--brand);
 }
 
 .skill-highlight p {
