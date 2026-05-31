@@ -177,10 +177,7 @@ h2 {
 .project h3 { margin: 0 0 0.5rem; }
 .project p { margin: 0 0 0.8rem; color: var(--muted); font-size: 0.94rem; }
 
-.project h4 {
-  margin: 0 0 0.5rem;
-  font-size: 1.05rem;
-}
+.featured-grid .project h3 { margin: 0 0 0.5rem; }
 
 .chips { display: flex; flex-wrap: wrap; gap: 0.43rem; }
 .chip {
@@ -340,8 +337,6 @@ footer {
   line-height: 1.6;
 }
 
-.project-info { }
-
 .project-meta {
   display: flex;
   flex-direction: column;
@@ -418,7 +413,6 @@ footer {
 
 .tech-group h3 {
   margin: 0 0 0.6rem;
-  font-size: 0.95rem;
   color: var(--brand);
   font-weight: 700;
   text-transform: uppercase;
